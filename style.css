@@ -1,0 +1,662 @@
+:root {
+    --dark-blue: #0a192f;
+    --darker-blue: #060c17;
+    --primary-blue: #64ffda;
+}
+
+body {
+    background-color: var(--dark-blue) !important;
+}
+
+.custom-nav {
+    background-color: var(--darker-blue);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transform: translateZ(0);
+    will-change: background-color;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--darker-blue) 0%, var(--dark-blue) 100%);
+    padding: 8rem 0;
+    contain: content;
+}
+
+.custom-section {
+    background-color: var(--dark-blue);
+    contain: content;
+}
+
+.custom-section-alt {
+    background-color: var(--darker-blue);
+    contain: content;
+}
+
+.bg-dark-blue {
+    background: #1a1f2d !important;
+}
+
+.bg-purple {
+    background-color: #7952b3 !important;
+}
+
+.card {
+    border: 2px solid rgba(255, 255, 255, 0.1) !important;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.card:hover {
+    border-color: var(--bs-primary) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.skill-badges .badge {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.skill-badges .badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary {
+    background-color: var(--primary-blue) !important;
+    border-color: var(--primary-blue) !important;
+    color: var(--darker-blue) !important;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.text-primary {
+    color: var(--primary-blue) !important;
+}
+
+.form-control {
+    background-color: var(--dark-blue);
+    border: 1px solid var(--primary-blue);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: var(--dark-blue);
+    border-color: var(--primary-blue);
+    color: white;
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2) !important;
+    transform: translateY(-2px);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.input-group-text {
+    background-color: var(--primary-blue) !important;
+    border-color: var(--primary-blue) !important;
+    color: var(--darker-blue) !important;
+}
+
+footer a {
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+footer a:hover {
+    transform: translateY(-3px);
+    color: #4CA5FF !important;
+}
+
+/* Navigation Animations */
+.nav-animate {
+    position: relative;
+    transition: all 0.3s ease;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.nav-animate::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-blue);
+    transition: width 0.3s ease;
+    transform: translateZ(0);
+    will-change: width;
+}
+
+.nav-animate:hover::after {
+    width: 100%;
+}
+
+.nav-animate:hover {
+    transform: translateY(-2px);
+}
+
+.navbar-brand.nav-animate::after {
+    height: 3px;
+}
+
+/* Navbar scroll animation */
+.nav-scrolled {
+    background: rgba(13, 17, 23, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Button Animations */
+.btn {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    contain: paint;
+}
+
+.btn:hover::before {
+    width: 300%;
+    height: 300%;
+}
+
+/* Section Transitions */
+section {
+    transition: opacity 0.5s ease;
+}
+
+/* Simplified Hero Section Styles */
+.hero-image-container {
+    position: relative;
+    max-width: 350px;
+    margin: 0 auto;
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 3px solid var(--primary-blue);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.hero-image::after {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border: 3px solid var(--primary-blue);
+    border-radius: 15px;
+    animation: borderPulse 2s ease-in-out infinite;
+    transform: translateZ(0);
+    will-change: transform, opacity;
+}
+
+/* Custom Badge Gradients */
+.bg-gradient-purple {
+    background: linear-gradient(45deg, #6f42c1, #9461fb) !important;
+    transition: all 0.3s ease;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.bg-gradient-cyan {
+    background: linear-gradient(45deg, #0dcaf0, #3d85e3) !important;
+    transition: all 0.3s ease;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.bg-gradient-orange {
+    background: linear-gradient(45deg, #fd7e14, #ffc107) !important;
+    transition: all 0.3s ease;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.badge {
+    border: none;
+    font-weight: 500;
+}
+
+.badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Add icon styles */
+.text-primary i {
+    filter: drop-shadow(0 0 2px rgba(100, 255, 218, 0.3));
+}
+
+.badge i {
+    font-size: 0.9em;
+}
+
+label i {
+    font-size: 1.1em;
+}
+
+.card-text i {
+    opacity: 0.8;
+}
+
+/* Custom badge backgrounds */
+.bg-react {
+    background-color: #61dafb !important;
+    color: #000;
+}
+
+.bg-vue {
+    background-color: #42b883 !important;
+    color: #fff;
+}
+
+.bg-angular {
+    background-color: #dd1b16 !important;
+    color: #fff;
+}
+
+.bg-bootstrap {
+    background-color: #7952b3 !important;
+    color: #fff;
+}
+
+.bg-mongo {
+    background-color: #4db33d !important;
+    color: #fff;
+}
+
+.bg-mysql {
+    background-color: #00758f !important;
+    color: #fff;
+}
+
+.bg-postgres {
+    background-color: #336791 !important;
+    color: #fff;
+}
+
+/* Additional badge backgrounds for new technologies */
+.bg-next {
+    background-color: #000000 !important;
+    color: #fff;
+}
+
+.bg-typescript {
+    background-color: #3178c6 !important;
+    color: #fff;
+}
+
+.bg-tailwind {
+    background-color: #38b2ac !important;
+    color: #fff;
+}
+
+.bg-aws {
+    background-color: #ff9900 !important;
+    color: #000;
+}
+
+.bg-react-native {
+    background-color: #61dafb !important;
+    color: #000;
+}
+
+.bg-redux {
+    background-color: #764abc !important;
+    color: #fff;
+}
+
+.bg-firebase {
+    background-color: #ffca28 !important;
+    color: #000;
+}
+
+.bg-graphql {
+    background-color: #e535ab !important;
+    color: #fff;
+}
+
+.bg-svelte {
+    background-color: #ff3e00 !important;
+    color: #fff;
+}
+
+.bg-python {
+    background-color: #3776ab !important;
+    color: #fff;
+}
+
+.bg-docker {
+    background-color: #2496ed !important;
+    color: #fff;
+}
+
+/* Additional blog-specific badge styles */
+.bg-tensorflow {
+    background-color: #ff6f00 !important;
+    color: #fff;
+}
+
+.bg-kubernetes {
+    background-color: #326ce5 !important;
+    color: #fff;
+}
+
+.bg-jenkins {
+    background-color: #d24939 !important;
+    color: #fff;
+}
+
+/* Blog card specific styles */
+.tech-tags .badge {
+    padding: 0.5em 0.8em;
+    font-size: 0.75em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Button hover effects */
+.btn-outline-success:hover {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+.btn-outline-info:hover {
+    background-color: #0dcaf0;
+    border-color: #0dcaf0;
+}
+
+/* Remove these animations and styles */
+.hero-image-border,
+.hero-image-overlay,
+@keyframes borderPulse,
+@keyframes float {
+    /* remove these completely */
+}
+
+/* Hero Section Animations */
+.hero-title-gradient {
+    background: linear-gradient(90deg, #fff, #4CA5FF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientFlow 8s ease infinite;
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes borderPulse {
+    0% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.05); opacity: 0.1; }
+    100% { transform: scale(1); opacity: 0.3; }
+}
+
+/* Personal Brand Highlight */
+.navbar-brand {
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-brand::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(90deg, transparent, var(--primary-blue), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Education Section Styles */
+.institution-logo {
+    max-width: 60px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.institution-logo:hover {
+    transform: scale(1.1);
+}
+
+.education-timeline .progress-bar {
+    background: linear-gradient(90deg, var(--primary-blue), #4a90e2);
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
+.achievements-section li {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.achievements-section li:hover {
+    transform: translateX(10px);
+}
+
+/* Add these gradient border classes */
+.border-gradient-primary {
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #007bff, #6610f2);
+}
+
+.border-gradient-info {
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #0dcaf0, #0d6efd);
+}
+
+/* Icon pulse animation */
+@keyframes iconPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.hero-icon-container i {
+    animation: iconPulse 2s ease infinite;
+}
+
+/* Project image hover effect */
+.card-img-top {
+    transition: all 0.5s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Performance optimizations */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+}
+
+/* Use hardware acceleration for animations */
+.card,
+.btn,
+.nav-animate,
+.skill-badges .badge {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Optimize transitions */
+.card {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reduce repaints */
+.custom-nav {
+    transform: translateZ(0);
+    will-change: background-color;
+}
+
+/* Optimize gradients */
+.bg-gradient-purple,
+.bg-gradient-cyan,
+.bg-gradient-orange {
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+/* Reduce animation complexity */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Optimize paint operations */
+.hero-image::after {
+    transform: translateZ(0);
+    will-change: transform, opacity;
+}
+
+/* Use more efficient shadows */
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* Reduce layout shifts */
+.hero-section,
+.custom-section,
+.custom-section-alt {
+    contain: content;
+}
+
+/* Optimize images */
+img {
+    content-visibility: auto;
+    contain: content;
+}
+
+/* More efficient animations */
+.nav-animate::after {
+    transform: translateZ(0);
+    will-change: width;
+}
+
+/* Reduce paint area */
+.btn::before {
+    contain: paint;
+}
+
+/* Footer Styles */
+.footer-links a:hover {
+    color: var(--bs-primary) !important;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+.footer-contact a:hover {
+    color: var(--bs-primary) !important;
+    transition: color 0.3s ease;
+}
+
+.social-links a i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover i {
+    transform: translateY(-3px);
+    color: var(--bs-primary) !important;
+}
+
+.footer-bottom-links a {
+    position: relative;
+}
+
+.footer-bottom-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--bs-primary);
+    transition: width 0.3s ease;
+}
+
+.footer-bottom-links a:hover::after {
+    width: 100%;
+}
+
+.hover-primary {
+    transition: color 0.3s ease;
+}
+
+.hover-primary:hover {
+    color: var(--bs-primary) !important;
+}
+
+/* Toast Styling */
+.toast {
+    background-color: rgba(33, 37, 41, 0.95);
+}
+
+.bg-success {
+    background-color: #198754 !important;
+}
+
+.bg-danger {
+    background-color: #dc3545 !important;
+}
