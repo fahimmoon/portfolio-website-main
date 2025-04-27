@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web Development Practices in 2024 - Fahim Ahmad</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="article-page">
+    <!-- Include SVG Sprite -->
+    <div class="svg-sprites" aria-hidden="true">
+        <!-- SVG sprite content will be loaded here -->
+    </div>
+    
+    <nav class="article-nav">
+        <div class="article-nav__inner">
+            <a href="../index.html" class="article-nav__logo">
+                <i class="bi bi-arrow-left"></i>
+                Fahim Ahmad
+            </a>
+            <div class="article-nav__menu">
+                <a href="../index.html#projects" class="article-nav__link">Projects</a>
+                <a href="../index.html#blogs" class="article-nav__link">Blog</a>
+                <a href="../index.html#contact" class="article-nav__link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="article-hero">
+        <div class="article-hero__overlay"></div>
+        
+        <div class="floating-icons floating-icons--left">
+            <div class="floating-icon floating-icon--react"></div>
+            <div class="floating-icon floating-icon--nextjs"></div>
+            <div class="floating-icon floating-icon--typescript"></div>
+        </div>
+
+        <div class="article-hero__container">
+            <h1 class="article-hero__title">Modern Web Development Practices in 2024</h1>
+            <p class="article-hero__subtitle">Exploring performance, frameworks & typing for faster, stronger apps</p>
+            <div class="article-hero__cta">
+                <a href="#guide" class="article-hero__button">
+                    <i class="bi bi-book"></i>
+                    Read the Guide
+                </a>
+            </div>
+        </div>
+
+        <div class="floating-icons floating-icons--right">
+            <div class="floating-icon floating-icon--typescript"></div>
+            <div class="floating-icon floating-icon--react"></div>
+            <div class="floating-icon floating-icon--nextjs"></div>
+        </div>
+    </section>
+
+    <main class="article-main">
+        <article class="article-content">
+            <h2>Performance First Approach</h2>
+            <ul>
+                <li>Code splitting and lazy loading strategies for optimal bundle sizes</li>
+                <li>Implementation of next-gen image formats and automatic optimization</li>
+                <li>Advanced caching strategies for improved load times</li>
+            </ul>
+
+            <h2>Modern Framework Evolution</h2>
+            <ul>
+                <li>Leveraging React Server Components for enhanced performance</li>
+                <li>Exploring Next.js App Router and server-side features</li>
+                <li>Build optimization with Vite and Turbopack</li>
+            </ul>
+        </article>
+
+        <section class="article-gallery">
+            <div class="gallery-grid">
+                <div class="gallery-item" data-image="../images/article/modern-web-dev-1.jpg">
+                    <img src="../images/Modern Web Development Practices in 2024 1.jpeg" alt="Modern Web Development" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">React Server Components Architecture</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-image="../images/article/modern-web-dev-2.jpg">
+                    <img src="../images/Modern Web Development Practices in 2024 2.jpeg" alt="Next.js Development" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Next.js App Router Implementation</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-image="../images/article/modern-web-dev-3.jpg">
+                    <img src="../images/article/modern-web-dev-3.jpg" alt="TypeScript Development" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">TypeScript Type System Overview</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="article-sidebar">
+            <div class="sidebar-card">
+                <h3>Technologies</h3>
+                <div class="tech-stack-list">
+                    <div class="tech-item">
+                        <svg class="tech-icon">
+                            <use href="#icon-react"/>
+                        </svg>
+                        React 18
+                    </div>
+                    <div class="tech-item">
+                        <svg class="tech-icon">
+                            <use href="#icon-nextjs"/>
+                        </svg>
+                        Next.js 13
+                    </div>
+                    <div class="tech-item">
+                        <svg class="tech-icon">
+                            <use href="#icon-typescript"/>
+                        </svg>
+                        TypeScript 5
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>Performance Stats</h3>
+                <div class="stats-list">
+                    <div class="stat-item">
+                        <i class="bi bi-speedometer2 stat-icon"></i>
+                        <div class="stat-info">
+                            <span class="stat-value">98</span>
+                            <span class="stat-label">Performance Score</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="bi bi-lightning-charge stat-icon"></i>
+                        <div class="stat-info">
+                            <span class="stat-value">0.8s</span>
+                            <span class="stat-label">Load Time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Gallery Modal -->
+    <div class="gallery-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <img src="" alt="" class="modal-image">
+        </div>
+    </div>
+
+    <footer class="article-footer">
+        <div class="footer-social">
+            <a href="#" class="social-link">
+                <i class="bi bi-twitter"></i>
+            </a>
+            <a href="#" class="social-link">
+                <i class="bi bi-github"></i>
+            </a>
+            <a href="#" class="social-link">
+                <i class="bi bi-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Load SVG sprite
+        fetch('../images/tech-icons.svg')
+            .then(response => response.text())
+            .then(sprite => {
+                document.querySelector('.svg-sprites').innerHTML = sprite;
+            });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.querySelector('.gallery-modal');
+            const modalImage = modal.querySelector('.modal-image');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const modalClose = modal.querySelector('.modal-close');
+
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const imageSrc = item.dataset.image;
+                    modalImage.src = imageSrc;
+                    modal.classList.add('active');
+                });
+            });
+
+            modalClose.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

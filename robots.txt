@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fahimmoon.github.io/sitemap.xml

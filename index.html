@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Full Stack Developer specializing in React, Node.js, and modern web technologies. View my portfolio of responsive, high-performance web applications.">
+    <meta name="keywords" content="Full Stack Developer, Web Developer, React Developer, Node.js, JavaScript, TypeScript, Frontend Developer, Backend Developer, Portfolio, Pakistan">
+    <meta name="author" content="Fahim Ahmad">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Fahim Ahmad - Full Stack Developer Portfolio">
+    <meta property="og:description" content="Experienced Full Stack Developer crafting modern web applications with React, Node.js, and cutting-edge technologies.">
+    <meta property="og:image" content="https://fahimmoon.github.io/images/me.jpg">
+    <meta property="og:url" content="https://fahimmoon.github.io">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fahim Ahmad - Full Stack Developer">
+    <meta name="twitter:description" content="Full Stack Developer building modern web applications. View my latest projects and skills.">
+    <meta name="twitter:image" content="https://fahimmoon.github.io/images/me.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fahimmoon.github.io">
+    
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#0a192f">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#FF1744">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <link rel="alternate icon" href="favicon/favicon.ico"> <!-- Fallback -->
+    <meta name="msapplication-TileColor" content="#FF1744">
+    <meta name="theme-color" content="#121212">
+    
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" as="style">
+    
+    <!-- Async CSS loading -->
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" media="print" onload="this.media='all'">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for CSS -->
+    <noscript>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    </noscript>
+
+    <title>Fahim Ahmad - Full Stack Developer</title>
+    <meta name="description" content="Fahim Ahmad - Full Stack Developer Portfolio showcasing web development projects and skills">
+    <style>
+        .project-card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .project-card .card-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .project-card .tech-stack {
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .project-card .features-list {
+            flex: 1;
+        }
+        
+        .project-card .btn-group {
+            margin-top: auto;
+        }
+
+        /* Responsive design utilities */
+        @media (max-width: 768px) {
+            .hero-section { padding: 4rem 0 !important; }
+            .btn-group { flex-direction: column !important; width: 100%; }
+            .btn-group .btn { width: 100%; margin-bottom: 0.5rem; }
+            .hero-image { max-width: 80%; margin: 0 auto; }
+        }
+        
+        /* Button hover states and accessibility */
+        .btn {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            touch-action: manipulation;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        /* Touch device optimizations */
+        @media (hover: none) {
+            .btn:hover {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+        
+        /* Custom button sizes for different screens */
+        @media (max-width: 576px) {
+            .btn-lg { 
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+            .btn-sm {
+                padding: 0.25rem 0.5rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Preloader styles */
+        .main-content {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .main-content.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body class="bg-dark">
+    <div class="main-content">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-nav">
+            <div class="container">
+                <a class="navbar-brand nav-animate" href="#"><i class="bi bi-code-slash text-primary me-2"></i>Fahim Ahmad</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="100">
+                            <a class="nav-link nav-animate" href="#home"><i class="bi bi-house-door text-primary me-1"></i>Home</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
+                            <a class="nav-link nav-animate" href="#about"><i class="bi bi-person text-success me-1"></i>About</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="250">
+                            <a class="nav-link nav-animate" href="#education">
+                                <i class="bi bi-mortarboard text-info me-1"></i>Education
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+                            <a class="nav-link nav-animate" href="#projects"><i class="bi bi-laptop text-warning me-1"></i>Projects</a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="350">
+                            <a class="nav-link nav-animate" href="#blogs">
+                                <i class="bi bi-journal-text text-info me-1"></i>Blog
+                            </a>
+                        </li>
+                        <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
+                            <a class="nav-link nav-animate" href="#contact"><i class="bi bi-envelope text-danger me-1"></i>Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section text-white py-5 mt-5">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                        <div class="hero-image-container">
+                            <img src="images/me.jpg" 
+                                 alt="Fahim Ahmad - Profile Photo" 
+                                 class="hero-image shadow-lg">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-lg-start" data-aos="fade-left">
+                        <div class="hero-icon-container mb-4" data-aos="zoom-in" data-aos-delay="200">
+                            <i class="bi bi-code-square text-primary display-1"></i>
+                        </div>
+                        <div class="d-flex gap-2 mb-3" data-aos="fade-up" data-aos-delay="300">
+                            <span class="badge bg-gradient-purple text-white px-3 py-2">
+                                <i class="bi bi-palette-fill me-2"></i>UI/UX
+                            </span>
+                            <span class="badge bg-gradient-cyan text-white px-3 py-2">
+                                <i class="bi bi-code-slash me-2"></i>Developer
+                            </span>
+                            <span class="badge bg-gradient-orange text-white px-3 py-2">
+                                <i class="bi bi-gear-wide-connected me-2"></i>Engineer
+                            </span>
+                        </div>
+                        <h1 class="display-4 fw-bold mb-4 hero-title-gradient" data-aos="fade-up" data-aos-delay="400">
+                            Hi, I'm Fahim Ahmad
+                        </h1>
+                        <p class="lead mb-4 text-light opacity-75" data-aos="fade-up" data-aos-delay="500">
+                            <i class="bi bi-quote text-primary me-2"></i>Transforming creative ideas into elegant, responsive, and user-centric web solutions with passion and precision.
+                        </p>
+                        <div class="d-flex gap-3 justify-content-lg-start justify-content-center">
+                            <a href="#contact" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="600">
+                                <i class="bi bi-envelope-fill me-2"></i>Get in Touch
+                            </a>
+                            <a href="#projects" class="btn btn-outline-light btn-lg" data-aos="fade-up" data-aos-delay="700">
+                                <i class="bi bi-eye-fill me-2"></i>View Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-5 custom-section">
+            <div class="container">
+                <h2 class="text-center mb-4 text-white" data-aos="fade-down">
+                    <i class="bi bi-person-circle text-primary me-2"></i>About Me
+                </h2>
+                <div class="row">
+                    <div class="col-lg-6 mb-4" data-aos="fade-right" data-aos-duration="1200">
+                        <div class="d-flex justify-content-center align-items-center h-100">
+                            <i class="bi bi-code-square text-primary display-1" 
+                               style="font-size: 200px;"
+                               data-aos="zoom-in"
+                               data-aos-delay="300"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-white" data-aos="fade-left" data-aos-duration="1200">
+                        <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">
+                            <i class="bi bi-person-badge text-primary me-2"></i>I'm a passionate Full Stack Developer with 2+ years of experience in crafting robust web applications. My journey in tech has equipped me with a deep understanding of both front-end aesthetics and back-end architecture.
+                        </p>
+                        
+                        <div class="mb-4" data-aos="fade-up" data-aos-delay="300">
+                            <h5><i class="bi bi-tools text-warning me-2"></i>Technical Expertise:</h5>
+                            <div class="skill-badges d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-gradient-purple p-2" data-aos="zoom-in" data-aos-delay="400">
+                                    <i class="bi bi-filetype-html text-warning me-1"></i>HTML5/CSS3
+                                </span>
+                                <span class="badge bg-gradient-cyan p-2"><i class="bi bi-filetype-js text-warning me-1"></i>JavaScript/TypeScript</span>
+                                <span class="badge bg-gradient-orange p-2"><i class="bi bi-react text-info me-1"></i>React.js</span>
+                                <span class="badge bg-success p-2"><i class="bi bi-node text-white me-1"></i>Node.js</span>
+                                <span class="badge bg-info p-2"><i class="bi bi-database-fill text-dark me-1"></i>SQL/NoSQL</span>
+                                <span class="badge bg-danger p-2"><i class="bi bi-git text-white me-1"></i>Git/GitHub</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-4" data-aos="fade-up" data-aos-delay="400">
+                            <h5><i class="bi bi-star-fill text-warning me-2"></i>Specializations:</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2" data-aos="fade-left" data-aos-delay="500">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>Responsive Web Design & Development
+                                </li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>RESTful API Development</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Modern JavaScript Frameworks</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Performance Optimization</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-4" data-aos="fade-up" data-aos-delay="500">
+                            <h5><i class="bi bi-award-fill text-primary me-2"></i>Certifications:</h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-gradient-purple p-2" data-aos="zoom-in" data-aos-delay="600">
+                                    <i class="bi bi-patch-check-fill text-warning me-1"></i>AWS Certified Developer
+                                </span>
+                                <span class="badge bg-gradient-cyan p-2">
+                                    <i class="bi bi-patch-check-fill text-warning me-1"></i>Meta Frontend Developer
+                                </span>
+                                <span class="badge bg-gradient-orange p-2">
+                                    <i class="bi bi-patch-check-fill text-warning me-1"></i>Google UX Design
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-5 custom-section-alt">
+            <div class="container">
+                <h2 class="text-center mb-4 text-white">
+                    <i class="bi bi-mortarboard text-primary me-2"></i>Education
+                </h2>
+                <div class="row">
+                    <div class="col-md-6 mb-4" data-aos="fade-right">
+                        <div class="card bg-dark-blue h-100 shadow-sm border-gradient-primary">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="university-logo me-3">
+                                        <img src="images/SZABIST-University-Islamabad.png" 
+                                             alt="SZABIST Logo" 
+                                             class="rounded border border-primary p-1" width="100">
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white mb-1">Bachelor of Science in Computer Science</h4>
+                                        <h6 class="text-primary mb-2">SZABIST University</h6>
+                                        <div class="d-flex align-items-center">
+                                            <span class="badge bg-success me-2">
+                                                <i class="bi bi-star-fill me-1"></i>3.22 GPA
+                                            </span>
+                                            <span class="badge bg-info">
+                                                <i class="bi bi-bookmark-star-fill me-1"></i>BSCS
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-calendar3 text-warning me-2"></i>                                <span class="text-light">2022 - 2026</span>
+                                    <i class="bi bi-geo-alt text-danger ms-3 me-2"></i>
+                                    <span class="text-light">Islamabad, Pakistan</span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <h6 class="text-primary mb-2">
+                                        <i class="bi bi-journal-text me-2"></i>Major Courses
+                                    </h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-gradient-purple">Data Structures & Algorithms</span>
+                                        <span class="badge bg-gradient-cyan">Object-Oriented Programming</span>
+                                        <span class="badge bg-gradient-orange">Database Management Systems</span>
+                                        <span class="badge bg-gradient-purple">Web Technologies</span>
+                                        <span class="badge bg-gradient-cyan">Software Engineering</span>
+                                        <span class="badge bg-gradient-orange">Operating Systems</span>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <h6 class="text-primary mb-2">
+                                        <i class="bi bi-book me-2"></i>Current Focus Areas
+                                    </h6>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">
+                                            <i class="bi bi-arrow-right-circle-fill text-warning me-2"></i>
+                                            <span class="text-info">Advanced Web Development Technologies</span>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-arrow-right-circle-fill text-warning me-2"></i>
+                                            <span class="text-info">Cloud Computing & DevOps</span>
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-arrow-right-circle-fill text-warning me-2"></i>
+                                            <span class="text-info">Full Stack Development</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="text-end">
+                                    <a href="https://szabist-isb.edu.pk/" target="_blank" 
+                                       class="badge bg-light text-dark text-decoration-none">
+                                        <i class="bi bi-buildings me-1"></i>
+                                        Shaheed Zulfikar Ali Bhutto Institute of Science and Technology
+                                        <i class="bi bi-box-arrow-up-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-4" data-aos="fade-left">
+                        <div class="card bg-dark-blue h-100 shadow-sm border-gradient-primary">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="university-logo me-3">
+                                        <img src="images/webdevelopersacademy-weblogo.png" 
+                                             alt="Web Developers Academy Logo" 
+                                             class="rounded border border-success p-2" 
+                                             width="80" height="80"
+                                             style="background-color: white; object-fit: contain;">
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white mb-1">Full Stack Development</h4>
+                                        <h6 class="text-success mb-2">Web Developers Academy</h6>
+                                        <div class="d-flex align-items-center">
+                                            <span class="badge bg-warning text-dark me-2">
+                                                <i class="bi bi-lightning-fill me-1"></i>Intensive
+                                            </span>
+                                            <span class="badge bg-danger">
+                                                <i class="bi bi-clock-fill me-1"></i>1000+ Hours
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 d-flex align-items-center">
+                                    <i class="bi bi-calendar3 text-warning me-2"></i>
+                                    <span class="text-light">2024 - 2025</span>
+                                    <i class="bi bi-geo-alt text-danger ms-3 me-2"></i>
+                                    <span class="text-light">Karachi, Pakistan</span>
+                                </div>
+
+                                <div class="mb-3">
+                                    <h6 class="text-success mb-2">
+                                        <i class="bi bi-code-square me-2"></i>Technical Skills Acquired
+                                    </h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-gradient-purple">Full Stack Development</span>
+                                        <span class="badge bg-gradient-cyan">API Design</span>
+                                        <span class="badge bg-gradient-orange">Database Management</span>
+                                        <span class="badge bg-gradient-purple">Cloud Services</span>
+                                        <span class="badge bg-gradient-cyan">System Architecture</span>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <h6 class="text-success mb-2">
+                                        <i class="bi bi-trophy me-2"></i>Certifications & Projects
+                                    </h6>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                            <span class="text-light">AWS Certified Developer Associate</span>
+                                        </li>
+                                        <li class="mb-2">
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                            <span class="text-light">Full Stack Capstone Project Winner</span>
+                                        </li>
+                                        <li>
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                            <span class="text-light">Hackathon First Place (Team Lead)</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="text-end">
+                                    <a href="#" class="btn btn-outline-success btn-sm">
+                                        <i class="bi bi-file-earmark-pdf me-2"></i>View Certificate
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-5 custom-section-alt">
+            <div class="container">
+                <h2 class="text-center mb-4 text-white">
+                    <i class="bi bi-laptop text-primary me-2"></i>My Projects
+                </h2>
+                <div class="row">
+                    <!-- MindEase Project -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark-blue h-100 shadow-sm border-gradient-info project-card">
+                            <img src="./images/mindease.jpeg" class="card-img-top" alt="MindEase App">
+                            <div class="card-body text-white">
+                                <h5 class="card-title mb-3">
+                                    <i class="bi bi-peace text-success me-2"></i>MindEase
+                                </h5>
+                                <p class="card-text small text-light mb-3">
+                                    Creative toolkit for calming the mind and uplifting the spirit. Features meditation guides, mood tracking, and personalized wellness recommendations.
+                                </p>
+                                <div class="tech-stack mb-3">
+                                    <span class="badge bg-react me-1">
+                                        <i class="bi bi-braces-asterisk me-1"></i>React
+                                    </span>
+                                    <span class="badge bg-next me-1">
+                                        <i class="bi bi-code-slash me-1"></i>Next.js
+                                    </span>
+                                    <span class="badge bg-tailwind me-1">
+                                        <i class="bi bi-palette me-1"></i>Tailwind
+                                    </span>
+                                    <span class="badge bg-mongo me-1">
+                                        <i class="bi bi-database-fill me-1"></i>MongoDB
+                                    </span>
+                                </div>
+                                <div class="features-list small mb-3">
+                                    <div><i class="bi bi-check-circle-fill text-success me-2"></i>Meditation Timer</div>
+                                    <div><i class="bi bi-check-circle-fill text-success me-2"></i>Mood Tracking</div>
+                                    <div><i class="bi bi-check-circle-fill text-success me-2"></i>Wellness Analytics</div>
+                                </div>
+                                <hr class="border-secondary my-3">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <small class="text-warning">
+                                        <i class="bi bi-calendar-event me-1"></i>2024
+                                    </small>
+                                    <div class="btn-group">
+                                        <a href="https://fahimmoon.github.io/MindEase/" class="btn btn-sm btn-outline-success">
+                                            <i class="bi bi-play-circle me-1"></i>Live Demo
+                                        </a>
+                                        <a href="https://github.com/fahimmoon/MindEase" class="btn btn-sm btn-outline-info">
+                                            <i class="bi bi-github me-1"></i>Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- EventNova Project -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark-blue h-100 shadow-sm border-gradient-info project-card">
+                            <img src="./images/event organization.jpeg" class="card-img-top" alt="EventNova Platform">
+                            <div class="card-body text-white">
+                                <h5 class="card-title mb-3">
+                                    <i class="bi bi-calendar-event text-info me-2"></i>EventNova
+                                </h5>
+                                <p class="card-text small text-light mb-3">
+                                    A platform for organizing and managing events seamlessly. Built with React and Tailwind CSS for a modern and responsive experience.
+                                </p>
+                                <div class="tech-stack mb-3">
+                                    <span class="badge bg-react me-1">
+                                        <i class="bi bi-code-slash me-1"></i>React
+                                    </span>
+                                    <span class="badge bg-tailwind me-1">
+                                        <i class="bi bi-palette me-1"></i>Tailwind
+                                    </span>
+                                    <span class="badge bg-next me-1">
+                                        <i class="bi bi-box-arrow-up-right me-1"></i>Next.js
+                                    </span>
+                                    <span class="badge bg-mongodb me-1">
+                                        <i class="bi bi-database me-1"></i>MongoDB
+                                    </span>
+                                </div>
+                                <div class="features-list small mb-3">
+                                    <div><i class="bi bi-check-circle-fill text-success me-2"></i>Event Creation & Management</div>
+                                    <div><i class="bi bi-check-circle-fill text-success me-2"></i>Real-time Updates</div>
+                                    <div><i class="bi bi-check-circle-fill text-success me-2"></i>Responsive Design</div>
+                                </div>
+                                <hr class="border-secondary my-3">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <small class="text-warning">
+                                        <i class="bi bi-calendar-event me-1"></i>2024
+                                    </small>
+                                    <div class="btn-group">
+                                        <a href="https://fahimmoon.github.io/eventnova" class="btn btn-sm btn-outline-success">
+                                            <i class="bi bi-play-circle me-1"></i>Live Demo
+                                        </a>
+                                        <a href="https://github.com/fahimmoon/eventnova" class="btn btn-sm btn-outline-info">
+                                            <i class="bi bi-github me-1"></i>Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- WeatherNow App Project -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark-blue h-100 shadow-sm border-gradient-info project-card">
+                            <img src="./images/Modern Weather.jpeg" class="card-img-top" alt="WeatherNow App">
+                            <div class="card-body text-white">
+                                <h5 class="card-title mb-3">
+                                    <i class="bi bi-cloud-sun text-info me-2"></i>WeatherNow
+                                </h5>
+                                <p class="card-text small text-light mb-3">
+                                    Modern weather application with real-time updates, location-based forecasting, and interactive weather maps. Features a clean, intuitive interface.
+                                </p>
+                                <div class="tech-stack mb-3">
+                                    <span class="badge bg-react me-1">
+                                        <i class="bi bi-code-slash me-1"></i>React
+                                    </span>
+                                    <span class="badge bg-redux me-1">
+                                        <i class="bi bi-diagram-3 me-1"></i>Redux
+                                    </span>
+                                    <span class="badge bg-next me-1">
+                                        <i class="bi bi-box-arrow-up-right me-1"></i>Next.js
+                                    </span>
+                                    <span class="badge bg-aws me-1">
+                                        <i class="bi bi-cloud me-1"></i>AWS
+                                    </span>
+                                </div>
+                                <div class="features-list small mb-3">
+                                    <div><i class="bi bi-check-circle-fill text-success me-2"></i>Real-time Weather Updates</div>
+                                    <div><i class="bi bi-check-circle-fill text-success me-2"></i>Interactive Maps</div>
+                                    <div><i class="bi bi-check-circle-fill text-success me-2"></i>Location Tracking</div>
+                                </div>
+                                <hr class="border-secondary my-3">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <small class="text-warning">
+                                        <i class="bi bi-calendar-event me-1"></i>2024
+                                    </small>
+                                    <div class="btn-group">
+                                        <a href="https://fahimmoon.github.io/weathernow--app/" class="btn btn-sm btn-outline-success">
+                                            <i class="bi bi-play-circle me-1"></i>Live Demo
+                                        </a>
+                                        <a href="https://github.com/fahimmoon/weathernow--app" class="btn btn-sm btn-outline-info">
+                                            <i class="bi bi-github me-1"></i>Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hackathon Portfolio Project -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark-blue h-100 shadow-sm border-gradient-info project-card">
+                            <img src="./images/hackathon portfolio.jpeg" class="card-img-top" alt="Hackathon Portfolio">
+                            <div class="card-body text-white">
+                                <h5 class="card-title mb-3">
+                                    <i class="bi bi-lightning-charge text-warning me-2"></i>Hackathon Portfolio
+                                </h5>
+                                <p class="card-text small text-light mb-3">
+                                    Award-winning hackathon project showcasing dynamic portfolio creation with React and Tailwind CSS. Features real-time previews and customizable themes.
+                                </p>
+                                <div class="tech-stack mb-3">
+                                    <span class="badge bg-react me-1">
+                                        <i class="bi bi-code-slash me-1"></i>React
+                                    </span>
+                                    <span class="badge bg-tailwind me-1">
+                                        <i class="bi bi-palette me-1"></i>Tailwind
+                                    </span>
+                                    <span class="badge bg-typescript me-1">
+                                        <i class="bi bi-braces me-1"></i>TypeScript
+                                    </span>
+                                    <span class="badge bg-firebase me-1">
+                                        <i class="bi bi-fire me-1"></i>Firebase
+                                    </span>
+                                </div>
+                                <div class="features-list small mb-3">
+                                    <div><i class="bi bi-check-circle-fill text-success me-2"></i>Real-time Preview</div>
+                                    <div><i class="bi bi-check-circle-fill text-success me-2"></i>Custom Themes</div>
+                                    <div><i class="bi bi-check-circle-fill text-success me-2"></i>PDF Export</div>
+                                </div>
+                                <hr class="border-secondary my-3">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <small class="text-warning">
+                                        <i class="bi bi-calendar-event me-1"></i>2024
+                                    </small>
+                                    <div class="btn-group">
+                                        <a href="https://fahimmoon.github.io/hackathon-portfolio-react-tailwind-/" class="btn btn-sm btn-outline-success">
+                                            <i class="bi bi-play-circle me-1"></i>Live Demo
+                                        </a>
+                                        <a href="https://github.com/fahimmoon/hackathon-portfolio-react-tailwind-" class="btn btn-sm btn-outline-info">
+                                            <i class="bi bi-github me-1"></i>Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Healthcare Project -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card bg-dark-blue h-100 shadow-sm border-gradient-info project-card">
+                            <img src="./images/Medical Care.jpeg" class="card-img-top" alt="Healthcare Platform">
+                            <div class="card-body text-white">
+                                <h5 class="card-title mb-3">
+                                    <i class="bi bi-heart-pulse text-danger me-2"></i>Healthcare Hub
+                                </h5>
+                                <p class="card-text small text-light mb-3">
+                                    Modern healthcare platform with patient management, appointment scheduling, and telemedicine integration.
+                                </p>
+                                <div class="tech-stack mb-3">
+                                    <span class="badge bg-vue me-1">
+                                        <i class="bi bi-code-slash me-1"></i>Vue.js
+                                    </span>
+                                    <span class="badge bg-bootstrap me-1">
+                                        <i class="bi bi-bootstrap me-1"></i>Bootstrap
+                                    </span>
+                                    <span class="badge bg-python me-1">
+                                        <i class="bi bi-file-earmark-code me-1"></i>Python
+                                    </span>
+                                    <span class="badge bg-mysql me-1">
+                                        <i class="bi bi-database me-1"></i>MySQL
+                                    </span>
+                                </div>
+                                <div class="features-list small mb-3">
+                                    <div><i class="bi bi-check-circle-fill text-success me-2"></i>Patient Management</div>
+                                    <div><i class="bi bi-check-circle-fill text-success me-2"></i>Appointment Scheduling</div>
+                                    <div><i class="bi bi-check-circle-fill text-success me-2"></i>Telemedicine Support</div>
+                                </div>
+                                <hr class="border-secondary my-3">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
+                                    <small class="text-warning">
+                                        <i class="bi bi-calendar-event me-1"></i>2024
+                                    </small>
+                                    <div class="btn-group">
+                                        <a href="https://fahimmoon.github.io/healthcare" class="btn btn-sm btn-outline-success">
+                                            <i class="bi bi-play-circle me-1"></i>Live Demo
+                                        </a>
+                                        <a href="https://github.com/fahimmoon/healthcare" class="btn btn-sm btn-outline-info">
+                                            <i class="bi bi-github me-1"></i>Source Code
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+        </section>
+
+        <!-- Blogs Section -->
+        <section id="blogs" class="py-5 custom-section">
+            <div class="container">
+                <h2 class="text-center mb-4 text-white">
+                    <i class="bi bi-journal-text text-primary me-2"></i>Latest Articles
+                </h2>
+                <div class="row">
+                    <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card bg-dark-blue h-100 shadow-sm border-gradient-primary">
+                            <div class="position-relative">
+                                <img src="./images/r1.png" class="card-img-top" alt="Web Development">
+                                <span class="badge bg-gradient-purple position-absolute top-0 end-0 m-3">
+                                    <i class="bi bi-code-square me-1"></i>Development
+                                </span>
+                            </div>
+                            <div class="card-body text-white">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-calendar3 text-primary me-2"></i>
+                                    <small>March 15, 2024</small>
+                                    <i class="bi bi-dot"></i>
+                                    <i class="bi bi-clock text-primary me-2"></i>
+                                    <small>5 min read</small>
+                                </div>
+                                <h5 class="card-title mb-3">Modern Web Development Practices in 2024</h5>
+                                <p class="card-text small text-light opacity-75">
+                                    Exploring the latest trends and best practices in web development, including performance optimization and modern frameworks.
+                                </p>
+                                <div class="tech-tags mb-3">
+                                    <span class="badge bg-react me-1">React</span>
+                                    <span class="badge bg-next me-1">Next.js</span>
+                                    <span class="badge bg-typescript me-1">TypeScript</span>
+                                </div>
+                                <hr class="border-secondary my-3">
+                                <div class="d-flex align-items-center">
+                                    <a href="articles/web-development.html" class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-book me-2"></i>Read Article
+                                    </a>
+                                    <div class="ms-auto">
+                                        <span class="me-3" title="Likes">
+                                            <i class="bi bi-hand-thumbs-up text-success me-1"></i>
+                                            <small>24</small>
+                                        </span>
+                                        <span title="Comments">
+                                            <i class="bi bi-chat-dots text-info me-1"></i>
+                                            <small>8</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card bg-dark-blue h-100 shadow-sm border-gradient-primary">
+                            <div class="position-relative">
+                                <img src="./images/r2.png" class="card-img-top" alt="AI in Development">
+                                <span class="badge bg-gradient-cyan position-absolute top-0 end-0 m-3">
+                                    <i class="bi bi-cpu me-1"></i>AI/ML
+                                </span>
+                            </div>
+                            <div class="card-body text-white">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-calendar3 text-primary me-2"></i>
+                                    <small>March 10, 2024</small>
+                                    <i class="bi bi-dot"></i>
+                                    <i class="bi bi-clock text-primary me-2"></i>
+                                    <small>7 min read</small>
+                                </div>
+                                <h5 class="card-title mb-3">Integrating AI in Modern Applications</h5>
+                                <p class="card-text small text-light opacity-75">
+                                    A comprehensive guide to implementing AI features in web applications using modern tools and APIs.
+                                </p>
+                                <div class="tech-tags mb-3">
+                                    <span class="badge bg-python me-1">Python</span>
+                                    <span class="badge bg-tensorflow me-1">TensorFlow</span>
+                                    <span class="badge bg-aws me-1">AWS AI</span>
+                                </div>
+                                <hr class="border-secondary my-3">
+                                <div class="d-flex align-items-center">
+                                    <a href="articles/ai-integration.html" class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-book me-2"></i>Read Article
+                                    </a>
+                                    <div class="ms-auto">
+                                        <span class="me-3" title="Likes">
+                                            <i class="bi bi-hand-thumbs-up text-success me-1"></i>
+                                            <small>32</small>
+                                        </span>
+                                        <span title="Comments">
+                                            <i class="bi bi-chat-dots text-info me-1"></i>
+                                            <small>12</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card bg-dark-blue h-100 shadow-sm border-gradient-primary">
+                            <div class="position-relative">
+                                <img src="./images/r3.png" class="card-img-top" alt="DevOps">
+                                <span class="badge bg-gradient-orange position-absolute top-0 end-0 m-3">
+                                    <i class="bi bi-gear-wide-connected me-1"></i>DevOps
+                                </span>
+                            </div>
+                            <div class="card-body text-white">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-calendar3 text-primary me-2"></i>
+                                    <small>March 5, 2024</small>
+                                    <i class="bi bi-dot"></i>
+                                    <i class="bi bi-clock text-primary me-2"></i>
+                                    <small>6 min read</small>
+                                </div>
+                                <h5 class="card-title mb-3">DevOps Best Practices for 2024</h5>
+                                <p class="card-text small text-light opacity-75">
+                                    Essential DevOps practices and tools for modern development teams to improve deployment efficiency.
+                                </p>
+                                <div class="tech-tags mb-3">
+                                    <span class="badge bg-docker me-1">Docker</span>
+                                    <span class="badge bg-kubernetes me-1">Kubernetes</span>
+                                    <span class="badge bg-jenkins me-1">Jenkins</span>
+                                </div>
+                                <hr class="border-secondary my-3">
+                                <div class="d-flex align-items-center">
+                                    <a href="articles/devops-practices.html" class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-book me-2"></i>Read Article
+                                    </a>
+                                    <div class="ms-auto">
+                                        <span class="me-3" title="Likes">
+                                            <i class="bi bi-hand-thumbs-up text-success me-1"></i>
+                                            <small>45</small>
+                                        </span>
+                                        <span title="Comments">
+                                            <i class="bi bi-chat-dots text-info me-1"></i>
+                                            <small>16</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-outline-primary">
+                        <i class="bi bi-collection me-2"></i>View All Articles
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-5 custom-section">
+            <div class="container">
+                <h2 class="text-center mb-4 text-white"><i class="bi bi-envelope-paper text-primary me-2"></i>Contact Me</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="card bg-dark-blue border-gradient-info shadow-lg">
+                            <div class="card-body p-4">
+                                <form id="contactForm" onsubmit="return handleSubmit(event)">
+                                    <div class="mb-3">
+                                        <label class="text-white mb-2">
+                                            <i class="bi bi-person-circle text-primary me-2"></i>Your Name
+                                        </label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-primary text-white">
+                                                <i class="bi bi-person-fill"></i>
+                                            </span>
+                                            <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="text-white mb-2">
+                                            <i class="bi bi-envelope-at text-primary me-2"></i>Your Email
+                                        </label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-primary text-white">
+                                                <i class="bi bi-envelope-fill"></i>
+                                            </span>
+                                            <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="text-white mb-2">
+                                            <i class="bi bi-chat-dots text-primary me-2"></i>Your Message
+                                        </label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-primary text-white">
+                                                <i class="bi bi-chat-text-fill"></i>
+                                            </span>
+                                            <textarea name="message" class="form-control" rows="4" placeholder="Type your message" required></textarea>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100" id="submitBtn">
+                                        <i class="bi bi-send-fill me-2"></i>Send Message
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Toast Notification -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="messageToast" class="toast align-items-center text-white" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        <!-- Message will be inserted here -->
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="custom-nav text-white py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- About Column -->
+                    <div class="col-lg-4 text-start">
+                        <h5 class="mb-4">
+                            <i class="bi bi-code-slash text-primary me-2"></i>Fahim Ahmad
+                        </h5>
+                        <p class="text-light opacity-75 mb-3">
+                            Full Stack Developer specializing in creating innovative web solutions with modern technologies and best practices.
+                        </p>
+                        <div class="social-links mb-4">
+                            <a href="https://github.com/yourusername" class="text-white me-3" title="GitHub">
+                                <i class="bi bi-github h4 hover-primary"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/yourusername" class="text-white me-3" title="LinkedIn">
+                                <i class="bi bi-linkedin h4 hover-primary"></i>
+                            </a>
+                            <a href="https://twitter.com/yourusername" class="text-white me-3" title="Twitter">
+                                <i class="bi bi-twitter h4 hover-primary"></i>
+                            </a>
+                            <a href="mailto:your.email@example.com" class="text-white" title="Email">
+                                <i class="bi bi-envelope h4 hover-primary"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="col-lg-4 text-start">
+                        <h5 class="mb-4">
+                            <i class="bi bi-link-45deg text-primary me-2"></i>Quick Links
+                        </h5>
+                        <div class="row">
+                            <div class="col-6">
+                                <ul class="list-unstyled footer-links">
+                                    <li class="mb-2">
+                                        <a href="#home" class="text-light text-decoration-none">
+                                            <i class="bi bi-chevron-right text-primary me-2"></i>Home
+                                        </a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="#about" class="text-light text-decoration-none">
+                                            <i class="bi bi-chevron-right text-primary me-2"></i>About
+                                        </a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="#projects" class="text-light text-decoration-none">
+                                            <i class="bi bi-chevron-right text-primary me-2"></i>Projects
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="list-unstyled footer-links">
+                                    <li class="mb-2">
+                                        <a href="#blogs" class="text-light text-decoration-none">
+                                            <i class="bi bi-chevron-right text-primary me-2"></i>Blog
+                                        </a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="#contact" class="text-light text-decoration-none">
+                                            <i class="bi bi-chevron-right text-primary me-2"></i>Contact
+                                        </a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="/resume.pdf" class="text-light text-decoration-none">
+                                            <i class="bi bi-chevron-right text-primary me-2"></i>Resume
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="col-lg-4 text-start">
+                        <h5 class="mb-4">
+                            <i class="bi bi-geo-alt text-primary me-2"></i>Contact Info
+                        </h5>
+                        <ul class="list-unstyled footer-contact">
+                            <li class="mb-3">
+                                <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                                Karachi, Pakistan
+                            </li>
+                            <li class="mb-3">
+                                <i class="bi bi-envelope-fill text-primary me-2"></i>
+                                <a href="mailto:contact@yourdomain.com" class="text-light text-decoration-none">
+                                    moonhunzai83@gmail.com
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <i class="bi bi-telephone-fill text-primary me-2"></i>
+                                <a href="tel:+923001234567" class="text-light text-decoration-none">
+                                    +92 326 2424598
+                                </a>
+                            </li>
+                            <li>
+                                <i class="bi bi-clock-fill text-primary me-2"></i>
+                                Available: 9:00 AM - 6:00 PM (PKT)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr class="border-secondary my-4">
+
+                <!-- Copyright -->
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0 text-light">
+                            © <script>document.write(new Date().getFullYear())</script> 
+                            <strong class="text-primary">Fahim Ahmad</strong>. All rights reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                        <div class="footer-bottom-links">
+                            <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+                            <a href="#" class="text-light text-decoration-none me-3">Terms of Service</a>
+                            <a href="#" class="text-light text-decoration-none">Cookie Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Chatbot -->
+    <button id="chat-toggle" class="chat-toggle-btn">
+        <i class="bi bi-chat-dots-fill"></i>
+    </button>
+
+    <div id="chatbot-container" class="chatbot-hidden">
+        <div id="chatbot-header">
+            <div class="title">
+                <i class="bi bi-robot"></i>
+                AI Assistant
+            </div>
+            <div class="controls">
+                <button id="minimize-chat">
+                    <i class="bi bi-dash-lg"></i>
+                </button>
+                <button id="close-chat">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+        </div>
+        <div id="chatbot-log"></div>
+        <div id="suggestions">
+            <div class="suggestion-wrapper">
+                <!-- Suggestions will be added here by JavaScript -->
+            </div>
+        </div>
+        <div id="chatbot-input">
+            <input type="text" id="message" placeholder="Type your message..." />
+            <button id="send">
+                <i class="bi bi-send-fill"></i>
+            </button>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="chatbot.css">
+    <script src="chatbot.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100,
+                delay: 0,
+                disable: 'mobile' // Disable on mobile for better performance
+            });
+
+            const mainContent = document.querySelector('.main-content');
+            
+            // Make main content visible
+            mainContent.classList.add('visible');
+        });
+
+        // Lazy load images
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img[data-src]');
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            images.forEach(img => imageObserver.observe(img));
+        });
+
+        // Smooth scroll with performance optimization
+        const smoothScroll = (target, duration) => {
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            let startTime = null;
+
+            const animation = currentTime => {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = ease(timeElapsed, startPosition, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            };
+
+            const ease = (t, b, c, d) => {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            };
+
+            requestAnimationFrame(animation);
+        };
+
+        // Optimize scroll event listener
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const nav = document.querySelector('.custom-nav');
+                    if (window.scrollY > 50) {
+                        nav.classList.add('nav-scrolled');
+                    } else {
+                        nav.classList.remove('nav-scrolled');
+                    }
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const submitBtn = form.querySelector('#submitBtn');
+            const formData = new FormData(form);
+            
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Sending...';
+            
+            // Simulate form submission (replace this with your actual form submission logic)
+            setTimeout(() => {
+                // Show success message
+                const messageToast = document.getElementById('messageToast');
+                const toastBody = document.querySelector('.toast-body');
+                
+                messageToast.classList.remove('bg-danger');
+                messageToast.classList.add('bg-success');
+                toastBody.innerHTML = '<i class="bi bi-check-circle me-2"></i>Thank you! Your message has been sent successfully.';
+                
+                // Show toast
+                const toast = new bootstrap.Toast(messageToast);
+                toast.show();
+                
+                // Reset form
+                form.reset();
+                
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="bi bi-send-fill me-2"></i>Send Message';
+            }, 1000);
+            
+            return false;
+        }
+    </script>
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>
